@@ -1,4 +1,4 @@
-# Delta Children — PDP + Open Box prototype
+# Delta Children — PDP + Open Box prototype (Option C)
 
 A static, responsive HTML/CSS/JS prototype. It has no build step and no dependencies, so it runs on GitHub Pages as-is.
 
@@ -6,9 +6,9 @@ A static, responsive HTML/CSS/JS prototype. It has no build step and no dependen
 
 | Page | URL |
 | --- | --- |
-| Regular PDP with the Open Box option | `index.html` |
-| Open Box PDP, V1 (a new version exists, shows **Buy New**) | `open-box.html` |
-| Open Box PDP, V2 (Open Box only) | `open-box.html?variant=open-box-only` |
+| Regular PDP, **Condition: New** selected | `index.html` |
+| Open Box PDP, **Condition: Open Box** selected (a new version exists) | `open-box.html` |
+| Open Box PDP, Open Box only (no new version, no selector) | `open-box.html?variant=open-box-only` |
 
 A small switcher in the bottom-left corner jumps between the three pages.
 
@@ -19,8 +19,7 @@ A small switcher in the bottom-left corner jumps between the three pages.
 
 ## What's interactive
 
-- Open Box button: hover and keyboard-focus states. The info icon shows a tooltip on desktop and a tap-to-open popover on mobile.
-- Links: Open Box button → Open Box PDP; **Buy New** → regular PDP.
+- Condition selector (below Add To Cart): choosing **Open Box** on the regular PDP loads the Open Box PDP, and choosing **New** there loads the regular PDP, like Amazon. Works with mouse, touch and keyboard (arrow keys).
 - Color swatches, quantity stepper (capped at 1 on Open Box pages), info-tab accordions, gallery dots.
 
 ## Publish on GitHub Pages

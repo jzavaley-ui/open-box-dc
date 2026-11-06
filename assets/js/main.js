@@ -80,6 +80,20 @@
     if (window.matchMedia('(max-width: 1023px)').matches) closeAll();
   }, { passive: true });
 
+  // ---- Option C: condition selector. Choosing the other condition loads that page (like Amazon).
+  document.querySelectorAll('.cond-opt[data-href] input').forEach(function (input) {
+    input.addEventListener('change', function () {
+      if (!input.checked) return;
+      var opt = input.closest('.cond-opt');
+      var fs = input.closest('.cond');
+      fs.querySelectorAll('.cond-opt').forEach(function (o) { o.classList.remove('is-selected'); });
+      opt.classList.add('is-selected', 'is-loading');
+      var legendValue = fs.querySelector('legend span');
+      if (legendValue) legendValue.textContent = opt.querySelector('.cond-name').textContent;
+      setTimeout(function () { window.location.assign(opt.getAttribute('data-href')); }, 150);
+    });
+  });
+
   // ---- Gallery dots (mobile carousel)
   document.querySelectorAll('.gallery').forEach(function (g) {
     var track = g.querySelector('.gallery-track');

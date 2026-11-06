@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Open Box – Adley 3-in-1 Convertible Crib | Delta Children (Prototype)</title>
+<title>Open Box – Adley 3-in-1 Convertible Crib | Delta Children (Prototype, Option C)</title>
 <meta name="description" content="Prototype: Open Box product page template.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -121,7 +121,7 @@
 
     <div class="group">
       <div class="opt-label"><b>Color:</b><span>Teak Brown</span></div>
-      <p class="note-small">This Open Box unit is available in this finish only.</p>
+      <p class="note-small">Open Box is available in the finishes below.</p>
       <div class="swatches"><span class="swatch" aria-pressed="true"><img src="assets/img/pdp-sw1.jpg" alt="Teak Brown"></span></div>
     </div>
 
@@ -143,11 +143,23 @@
       </div>
     </div>
 
-    <!-- V1: a new counterpart exists -->
-    <div class="buy-new v1-only">
-      <div class="or-divider">Other Options</div>
-      <a class="btn-buy-new" href="index.html">Buy New<span>$349.99<svg class="icon"><use href="#i-arrow"/></svg></span></a>
-    </div>
+    <!-- V1 / Option C: condition selector (Open Box selected) -->
+    <fieldset class="cond v1-only">
+      <legend><b>Condition:</b> <span>Open Box</span></legend>
+      <div class="cond-grid">
+        <label class="cond-opt" data-href="index.html">
+          <input type="radio" name="condition" value="new">
+          <span class="cond-name">New</span>
+          <span class="cond-price">$349.99</span>
+        </label>
+        <label class="cond-opt is-selected">
+          <input type="radio" name="condition" value="open-box" checked>
+          <span class="cond-name">Open Box</span>
+          <span class="cond-price">$000.00</span>
+          <span class="cond-desc">Opened, returned and inspected. Final sale.</span>
+        </label>
+      </div>
+    </fieldset>
 
     <!-- V2: Open Box only -->
     <div class="note v2-only" role="note">
@@ -223,8 +235,8 @@
 
 <nav class="proto-switch" aria-label="Prototype pages">
   <a href="index.html">Regular PDP</a>
-  <a href="open-box.html" data-variant-link="v1">Open Box V1</a>
-  <a href="open-box.html?variant=open-box-only" data-variant-link="v2">Open Box V2</a>
+  <a href="open-box.html" data-variant-link="v1">Open Box (with New)</a>
+  <a href="open-box.html?variant=open-box-only" data-variant-link="v2">Open Box Only</a>
 </nav>
 
 <script src="assets/js/main.js"></script>

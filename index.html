@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Adley 3-in-1 Convertible Crib | Delta Children (Prototype)</title>
+<title>Adley 3-in-1 Convertible Crib | Delta Children (Prototype, Option C)</title>
 <meta name="description" content="Prototype: regular product page with the Open Box option.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -159,30 +159,23 @@
         <span>With <span class="shoppay">Shop Pay</span> <a href="#">Check your purchasing power</a></span>
       </div>
 
-      <!-- Open Box option (AC1) -->
-      <div class="or-divider">Other Options</div>
-      <div class="ob-card">
-        <a class="ob-link" href="open-box.html" aria-label="Buy Open Box: Adley 3-in-1 Convertible Crib for $000.00, save $00.00"></a>
-        <div class="ob-main">
-          <span class="ob-eyebrow">Get It for Less</span>
-          <span class="ob-title-row">
-            <span class="ob-title">Buy Open Box</span>
-            <span class="ob-info-wrap">
-              <button type="button" class="ob-info" aria-label="What is Open Box?" aria-expanded="false" aria-describedby="ob-tip-1"><svg class="icon"><use href="#i-info"/></svg></button>
-              <span class="ob-tip" id="ob-tip-1" role="tooltip">
-                <span class="ob-tip-head">What is Open Box?<button type="button" class="ob-tip-close" aria-label="Close"><svg class="icon"><use href="#i-close"/></svg></button></span>
-                Final sale, not eligible for return, and excluded from promotions. May show minor cosmetic damage or wear, or be missing non-essential accessories.
-              </span>
-            </span>
-          </span>
+      <!-- Option C: condition selector (New selected) -->
+      <fieldset class="cond">
+        <legend><b>Condition:</b> <span>New</span></legend>
+        <div class="cond-grid">
+          <label class="cond-opt is-selected">
+            <input type="radio" name="condition" value="new" checked>
+            <span class="cond-name">New</span>
+            <span class="cond-price">$349.99</span>
+          </label>
+          <label class="cond-opt" data-href="open-box.html">
+            <input type="radio" name="condition" value="open-box">
+            <span class="cond-name">Open Box</span>
+            <span class="cond-price">From $000.00</span>
+            <span class="cond-desc">Opened, returned and inspected. Final sale.</span>
+          </label>
         </div>
-        <div class="ob-side">
-          <span class="ob-price">$000.00</span>
-          <span class="ob-save">Save $00.00</span>
-        </div>
-        <svg class="icon ob-chev"><use href="#i-chev-right"/></svg>
-      </div>
-      <a class="ob-see-all" href="#">See All Open Box Products</a>
+      </fieldset>
     </div>
 
     <div class="tabs">
@@ -250,8 +243,8 @@
 
 <nav class="proto-switch" aria-label="Prototype pages">
   <a href="index.html" aria-current="page">Regular PDP</a>
-  <a href="open-box.html">Open Box V1</a>
-  <a href="open-box.html?variant=open-box-only">Open Box V2</a>
+  <a href="open-box.html">Open Box (with New)</a>
+  <a href="open-box.html?variant=open-box-only">Open Box Only</a>
 </nav>
 
 <script src="assets/js/main.js"></script>

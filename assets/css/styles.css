@@ -270,6 +270,27 @@ body.v2 .v1-only { display: none !important; }
 .pcard-save { font-size: 12px; font-weight: 600; color: var(--lb-100); }
 .view-all-btn { display: none; }
 
+/* ---------- Option C: condition selector (New / Open Box) ---------- */
+.cond { border: 0; margin: 4px 0 0; padding: 0; min-width: 0; }
+.cond legend { padding: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
+.cond legend b { font-size: 12px; line-height: 1.4; color: var(--gray-600); }
+.cond legend span { font-size: 14px; font-weight: 600; line-height: 1.4; color: var(--lb-80); }
+.cond-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.cond-opt { display: grid; grid-template-columns: 18px minmax(0, 1fr); column-gap: 8px; row-gap: 4px; align-content: start; padding: 12px 14px; background: var(--white); border: 2px solid var(--gray-300); border-radius: var(--radius); cursor: pointer; transition: border-color 150ms var(--ease), background-color 150ms var(--ease); }
+.cond-opt:not(.is-selected):hover { border-color: var(--lb-50); background: var(--gray-50); }
+.cond-opt.is-selected { background: var(--lb-10); border-color: var(--lb-80); cursor: default; }
+.cond-opt input { appearance: none; -webkit-appearance: none; margin: 0; width: 18px; height: 18px; align-self: center; border: 2px solid #959595; border-radius: 999px; background: var(--white); cursor: pointer; }
+.cond-opt input:checked { border-color: var(--lb-80); background: radial-gradient(circle, var(--lb-80) 0 4px, var(--white) 4.5px); }
+.cond-opt input:focus-visible { outline: 3px solid var(--lb-80); outline-offset: 2px; }
+.cond-name { font-size: 14px; font-weight: 600; line-height: 1.4; color: var(--gray-700); }
+.cond-price { grid-column: 2; font-size: 14px; font-weight: 600; line-height: 1.4; color: var(--gray-600); }
+.cond-desc { grid-column: 2; font-size: 11px; line-height: 1.4; color: var(--gray-600); }
+.cond-opt.is-loading { opacity: .7; pointer-events: none; }
+@media (max-width: 1023px) {
+  .cond-opt { padding: 12px; }
+  .cond-desc { grid-column: 1 / -1; }
+}
+
 /* ---------- Prototype switch ---------- */
 .proto-switch { position: fixed; left: 16px; bottom: 16px; z-index: 50; display: flex; gap: 4px; padding: 4px; background: var(--gray-900); border-radius: 999px; box-shadow: var(--shadow-hover); font-size: 12px; }
 .proto-switch a { padding: 6px 12px; border-radius: 999px; color: #fff; text-decoration: none; opacity: .75; white-space: nowrap; }
